@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.EffortEditorViewController">
+   <children>
+      <Button fx:id="displayView" layoutX="273.0" layoutY="337.0" mnemonicParsing="false" onAction="#displayView" text="Home" />
+      <ComboBox fx:id="projectComboBox" layoutX="59.0" layoutY="46.0" prefWidth="150.0" />
+      <ComboBox fx:id="effortComboBox" layoutX="59.0" layoutY="98.0" prefHeight="26.0" prefWidth="320.0" />
+      <TextField fx:id="dateField" layoutX="59.0" layoutY="152.0" prefHeight="26.0" prefWidth="150.0" />
+      <TextField fx:id="minutesField" layoutX="223.0" layoutY="152.0" prefHeight="26.0" prefWidth="150.0" />
+      <Button fx:id="updateButton" layoutX="59.0" layoutY="254.0" mnemonicParsing="false" onAction="#updateEntry" text="Update Entry" />
+      <Text layoutX="59.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" />
+      <Text layoutX="225.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Taken (Minutes)" />
+      <Text layoutX="60.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Project" />
+      <Text layoutX="59.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Effort to Edit" />
+      <ComboBox fx:id="stepComboBox" layoutX="59.0" layoutY="208.0" prefWidth="150.0" />
+      <ComboBox fx:id="categoryComboBox" layoutX="225.0" layoutY="209.0" prefWidth="150.0" />
+      <ComboBox fx:id="deliverableComboBox" layoutX="391.0" layoutY="210.0" prefWidth="150.0" />
+      <Text layoutX="60.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Life Cycle Step" />
+      <Text layoutX="225.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Effort Category" />
+      <Text layoutX="391.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deliverable" />
+      <Button fx:id="deleteButton" layoutX="224.0" layoutY="254.0" mnemonicParsing="false" onAction="#deleteEntry" text="Delete Entry" />
+      <TextField fx:id="secondsField" layoutX="385.0" layoutY="152.0" prefHeight="26.0" prefWidth="150.0" />
+      <Text layoutX="385.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Taken (Seconds)" />
+   </children>
+</AnchorPane>
