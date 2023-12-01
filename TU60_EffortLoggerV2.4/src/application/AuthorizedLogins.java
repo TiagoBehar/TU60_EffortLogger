@@ -46,8 +46,8 @@ public class AuthorizedLogins {
 		user1.addData(data2);
 		
 		Login user2 = new Login();
-		user2.setName("Michael Jackson");
-		user2.setPassword("HeeHee");
+		user2.setName("BenSmith");
+		user2.setPassword("111");
 
 		
 		Login user3 = new Login();

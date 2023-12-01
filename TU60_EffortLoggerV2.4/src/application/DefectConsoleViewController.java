@@ -116,6 +116,7 @@ public class DefectConsoleViewController implements Initializable {
 		//change the scene
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(fxmlLoader.load(), 900, 600);
+		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		stage.setTitle("Home");
 		
 		//pass over the login data

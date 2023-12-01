@@ -41,7 +41,7 @@ public class DisplayViewController {
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(fxmlLoader.load(), 900, 600);
         stage.setTitle("Effort Console");
-
+        scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
         // pass over the login data
         EffortConsoleViewController control = fxmlLoader.getController();
         control.setLogin(localLogin);
@@ -56,7 +56,7 @@ public class DisplayViewController {
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(fxmlLoader.load(), 900, 600);
         stage.setTitle("Defect Console");
-
+        scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
         // pass over the login data
         DefectConsoleViewController control = fxmlLoader.getController();
         control.setLogin(localLogin);
@@ -71,7 +71,7 @@ public class DisplayViewController {
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(fxmlLoader.load(), 900, 600);
         stage.setTitle("PlanningPoker");
-
+        scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
         // pass over the login data
         PlanningPokerViewController control = fxmlLoader.getController();
         control.setLogin(localLogin);
@@ -86,7 +86,7 @@ public class DisplayViewController {
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(fxmlLoader.load(), 900, 600);
 		stage.setTitle("Report Console");
-		
+		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		ReportViewController control = fxmlLoader.getController();
 		control.setLogin(localLogin);
 		stage.setScene(scene);
@@ -102,6 +102,7 @@ public class DisplayViewController {
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(fxmlLoader.load(), 900, 600);
 		stage.setTitle("Effort Editor");
+		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		
 		EffortEditorViewController control = fxmlLoader.getController();
 		control.setLogin(localLogin);

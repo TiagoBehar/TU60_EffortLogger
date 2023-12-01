@@ -1,6 +1,8 @@
 /*
  Written by:
  -Tiago Behar
+ Changes added by;
+ -Makaylah Garcia
  -...
  */
 
@@ -23,6 +25,7 @@ public class LoginViewController {
 	private Login login = new Login();
 	private AuthorizedLogins loginList = new AuthorizedLogins();
 	
+	
 	@FXML
 	private TextField usernameField;
 	@FXML
@@ -32,11 +35,24 @@ public class LoginViewController {
 	
 	public void submitLogin(ActionEvent event) throws IOException
 	{
+		String username = usernameField.getText();
+		String password = passwordField.getText();
+		
+		if(username.isEmpty() || password.isEmpty()) { //validation to check user input
+			//send alert to user
+			Alert emptyFieldsAlert = new Alert(AlertType.ERROR);
+	        emptyFieldsAlert.setHeaderText("--ERROR: Empty Field(s)--");
+	        emptyFieldsAlert.setContentText("Enter both a username and password.");
+	        emptyFieldsAlert.showAndWait();
+	        return;
+		}
+		
 		loginList.testLogins(); //initialize test data
 		
-		login.setName(usernameField.getText());//get name from text field
-		login.setPassword(passwordField.getText());//get password from password field
+		login.setName(username);//get name from text field
+		login.setPassword(password);//get password from password field
 		int valid = loginList.checkLogin(login); //returns the index of the login information
+	
 		if(loginList.checkLogin(login) >= 0) {//if the login is valid
 			for(int i = 0; i < loginList.getLogin(valid).getData().size(); i++) { //load data about the user into the login
 				//System.out.println("adding: " + loginList.getLogin(valid).getData().get(i) + " to local list");
@@ -47,6 +63,7 @@ public class LoginViewController {
 			stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 			scene = new Scene(fxmlLoader.load(), 900, 600);
 			stage.setTitle("Home");
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			
 			//pass the login data and change the stage
 			DisplayViewController control = fxmlLoader.getController();

@@ -161,7 +161,8 @@ public class PlanningPokerViewController implements Initializable{
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(fxmlLoader.load(), 900, 600);
 		stage.setTitle("Home");
-
+		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+		
 		//pass over the login data
 		DisplayViewController control = fxmlLoader.getController();
 		control.setLogin(localLogin);
