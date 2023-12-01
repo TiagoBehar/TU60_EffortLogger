@@ -14,7 +14,7 @@
       <TextField fx:id="dateField" layoutX="59.0" layoutY="152.0" prefHeight="26.0" prefWidth="150.0" />
       <TextField fx:id="minutesField" layoutX="223.0" layoutY="152.0" prefHeight="26.0" prefWidth="150.0" />
       <Button fx:id="updateButton" layoutX="59.0" layoutY="254.0" mnemonicParsing="false" onAction="#updateEntry" text="Update Entry" />
-      <Text layoutX="59.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" />
+      <Text layoutX="59.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date (yyyy-mm-dd)" />
       <Text layoutX="225.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Taken (Minutes)" />
       <Text layoutX="60.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Project" />
       <Text layoutX="59.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Effort to Edit" />
